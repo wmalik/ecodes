@@ -20,13 +20,13 @@ public class FolderMonitor extends Thread{
 		//Nothing here at the moment
 	}
 
-	/* For Testing Only
+	// For Testing Only
 	public static void main(String[] args) {
 
 		FolderMonitor fm = new FolderMonitor();
 		fm.start();
 	}
-	*/
+	
 
 	public void run() {
 
@@ -63,11 +63,11 @@ public class FolderMonitor extends Thread{
 		File[] nodes = new File[5];
 		List<File> failedNodes = new ArrayList<File>(5);
 
-		nodes[0] = new File("bin/nodes/n0");
-		nodes[1] = new File("bin/nodes/n1");
-		nodes[2] = new File("bin/nodes/n2");
-		nodes[3] = new File("bin/nodes/n3");
-		nodes[4] = new File("bin/nodes/n4");
+		nodes[0] = new File("nodes/n0");
+		nodes[1] = new File("nodes/n1");
+		nodes[2] = new File("nodes/n2");
+		nodes[3] = new File("nodes/n3");
+		nodes[4] = new File("nodes/n4");
 
 		for (int i = 0; i < nodes.length; i++) {
 			if(!nodes[i].exists()) {
